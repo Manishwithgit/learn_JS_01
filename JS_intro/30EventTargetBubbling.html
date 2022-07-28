@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Event Target Bubbling </title>
+    <style>
+    body{background-color: yellowgreen; }
+    
+    .buybtn{
+         border: 2.2px solid firebrick;
+         padding: 11px;
+         margin: 2px;
+         /* display: flex; */
+        
+    }
+    </style>
+</head>
+<body>
+    <h1>Event Target Bubbling Propagation </h1>
+     
+     <button data-price="111" class="buybtn">1</button>
+     <button data-price="1112" class="buybtn">2</button>
+     <button data-price="113" class="buybtn">3</button>
+     <button data-price="114" class="buybtn">4</button>
+     <button data-price="115" class="buybtn">5</button>
+     <button data-price="116" class="buybtn">6</button>
+     <button data-price="117" class="buybtn">7</button>
+     <button data-price="111.8" class="buybtn">8</button>
+     <button data-price="119" class="buybtn">9</button>
+
+     <img class="moon" src="https://picsum.photos/211" alt="None">
+
+     <button data-price="110.0" class="buybtn">10</button>
+     <button data-price="1111" class="buybtn">11</button>
+
+
+     
+
+      <script src=".//30EventTargetBubbling.js"></script>
+
+</body>
+</html>

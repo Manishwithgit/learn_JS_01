@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closures</title>
+    <style>
+        body{
+            background: peru;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <script src="./closures.js"></script> -->
+      
+    <!-- <script>
+        function outer(){
+            const outervar='hello this is outer variable';
+            function inner(){
+                const innervar='hello this is inner variable';
+                
+                console.log(outervar);
+                console.log(innervar);
+            }
+            inner();
+        }
+        outer();
+    </script> -->
+    <!-- <script>
+        function outer(){
+            const outervar='hello this is outer variable';
+            function inner(){
+                const innervar='hello this is inner variable';
+                
+                console.log(outervar);
+                console.log(innervar);
+            }
+             return inner;
+        }
+
+         const innerFunction = outer();
+
+         innerFunction();
+    </script> -->
+
+    <script>
+        function creategreet(greeting=''){
+            const mygreet=greeting.toUpperCase();
+            return function (name){
+                return `${mygreet} ${name}`;
+            }
+        } 
+        const sayMe =creategreet('Me to');
+        const sayHo =creategreet('Home');
+        console.log(sayMe('mos'));
+        console.log(sayHo('kali'));
+        console.log(sayHo('kaali'))
+
+
+        function playGame(gameName){
+            let score=0;
+            return function win(){
+                score++;
+                return `Your name ${gameName} score is ${score}`;
+            }
+        }
+        const FootballGame=playGame('Football Match Goal')
+    </script>
+</body>
+</html>
